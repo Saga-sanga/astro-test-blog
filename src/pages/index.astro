@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
+import TsGreeting from "../components/TsGreeting.tsx";
 const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <Greeting client:load messages={["Hej", "Hello", "Hola", "Habari"]} />
+  <TsGreeting client:load messages={["Hi", "Hello", "Namaste", "Yello"]} />
 </BaseLayout>
